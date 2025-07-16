@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import questions from "./questions.js";
 import "./App.css";
 
@@ -24,18 +26,23 @@ function QuestionItem({ q }) {
         className="question-content"
         style={{ maxHeight: `${height}px` }}
       >
-        {q.explanation && <p>{q.explanation}</p>}
+        {q.explanation && (
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{q.explanation}</ReactMarkdown>
+        )}
         {q.videos?.length > 0 && (
-          <ul>
-            {q.videos.map((v, i) => (
-              <li key={i}>
-                <a href={v.url} target="_blank" rel="noopener noreferrer">
-                  {v.title}
-                </a>
-                {v.time && ` (${v.time}s)`}
-              </li>
-            ))}
-          </ul>
+          <>
+            <h3>Видео</h3>
+            <ul>
+              {q.videos.map((v, i) => (
+                <li key={i}>
+                  <a href={v.url} target="_blank" rel="noopener noreferrer">
+                    {v.title}
+                  </a>
+                  {v.time && ` (${v.time}s)`}
+                </li>
+              ))}
+            </ul>
+          </>
         )}
       </div>
     </li>
