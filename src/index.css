@@ -27,7 +27,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   padding: 2rem;
 }
