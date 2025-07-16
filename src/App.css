@@ -31,6 +31,16 @@
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.question-content ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.question-content h3 {
+  margin: 0.5rem 0;
 }
 
 input {
