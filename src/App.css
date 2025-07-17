@@ -44,9 +44,17 @@
 }
 
 .question-content pre {
+  background: #1e1e1e;
+  color: #dcdcdc;
   overflow-x: auto;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.question-content pre code {
+  background: none;
+  color: inherit;
 }
 
 .question-content code {
