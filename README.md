@@ -10,3 +10,13 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Formatting question data
+
+Whenever the contents of `src/questions.js` are modified, run:
+
+```bash
+npm run format:questions
+```
+
+This formats the question explanations and writes the output back to `src/questions.js`.
